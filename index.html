@@ -72,18 +72,41 @@
         </div>
     </div>
 
+    <div class="carousel slide" id="carouselControls" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="images/hotel1.jpeg" alt="primer slide"> 
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/hotel2.jpeg" alt="segundo slide"> 
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="images/hotel3.jpeg" alt="tercer slide"> 
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
     <img class="img-fluid ms-2 me-2" src="images/playa.jpg">
     <hr>
     <div class="d-flex flex-wrap flex-row-reverse">
         <div class="card card-hotel d-flex flex-column justify-content-between">
             <img class="card-img-top" src="images/barcelona.jpeg">
-            <h4 class="card-title">Hotel Barcelona</h4>
+            <h4>Hotel Barcelona</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, id.</p>
             <button class="btn btn-primary"><span class="oi oi-plus"></span>Reservar</button>
         </div>
         <div class="card card-hotel d-flex flex-column justify-content-between">
             <img class="card-img-top" src="images/barcelona.jpeg">
-            <h4>Hotel Posadas</h4>
+            <h4 class="card-title" data-bs-toogle="tooltip" data-bs-placement="top" title="Los primeras reservas cuentan con clases de tango gratis!">Hotel Posadas</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, id.</p>
             <button class="btn btn-primary"><span class="oi oi-plus"></span>Reservar</button>
         </div>
@@ -120,7 +143,7 @@
             <button type="button" class="btn btn-outline-success mb-2" data-bs-toggle="modal" data-bs-target="#contacto">
                 Contacto
             </button>
-            <button class="btn btn-primary"><span class="oi oi-plus"></span>Reservar</button>
+            <button class="btn btn-primary" data-bs-toggle="popover" title="Promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-plus"></span>Reservar</button>
         </div>
 
         <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -176,6 +199,16 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+        <script>
+        $(function(){
+            $("[data-bs-toggle='tooltip']").tooltip();
+            $("[data-bs-toggle='popover']").popover();
+            $('.carousel').carousel({
+                interval: 100
+            });
+        });
+    </script>
 </body>
 
 </html>

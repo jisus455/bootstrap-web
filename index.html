@@ -42,13 +42,16 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#funciona">Funciona</button>
+                <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#funciona">Funciona</button>
             </div>
             <div class="col-sm-4">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#reserva">Reserva</button>
+                <button class="btn btn-warning btn-lg" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#reserva">Reserva</button>
             </div>
             <div class="col-sm-4">
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pago">Pago</button>
+                <button class="btn btn-success btn-lg" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#pago">Pago</button>
             </div>
         </div>
 
@@ -107,6 +110,43 @@
             <h4>Hotel Madrid</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, id.</p>
             <button class="btn btn-primary"><span class="oi oi-plus"></span>Reservar</button>
+        </div>
+
+        <div class="card card-hotel d-flex flex-column justify-content-between">
+            <img class="card-img-top" src="images/barcelona.jpeg">
+            <h4>Hotel San Pablo</h4>
+            <p>Brasil</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, rerum?</p>
+            <button type="button" class="btn btn-outline-success mb-2" data-bs-toggle="modal" data-bs-target="#contacto">
+                Contacto
+            </button>
+            <button class="btn btn-primary"><span class="oi oi-plus"></span>Reservar</button>
+        </div>
+
+        <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Contacto con el hotel</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="col-form-label">Tu email</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label">Mensaje</label>
+                                <textarea type="text" class="form-control"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Enviar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

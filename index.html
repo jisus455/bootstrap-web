@@ -140,10 +140,12 @@
             <h4>Hotel San Pablo</h4>
             <p>Brasil</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, rerum?</p>
-            <button type="button" class="btn btn-outline-success mb-2" data-bs-toggle="modal" data-bs-target="#contacto">
+            <button type="button" class="btn btn-outline-success mb-2" data-bs-toggle="modal" data-bs-target="#contacto" id="contactoBtn">
                 Contacto
             </button>
-            <button class="btn btn-primary" data-bs-toggle="popover" title="Promociones" data-content="Consulta las promociones vigentes"><span class="oi oi-plus"></span>Reservar</button>
+            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Consulta las promociones vigentes">
+                Reservar
+              </button>
         </div>
 
         <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -205,7 +207,23 @@
             $("[data-bs-toggle='tooltip']").tooltip();
             $("[data-bs-toggle='popover']").popover();
             $('.carousel').carousel({
-                interval: 100
+                interval: 2000
+            });
+
+            $('#contacto').on('show.bs.modal', function(e){
+                console.log("el modal se esta mostrando");
+
+                $('#contactoBtn').removeClass('btn-outline-success');
+                $('#contactoBtn').addClass('btn-primary');
+                $('#contactoBtn').prop('disabled', true);
+            });
+            $('#contacto').on('shown.bs.modal', function(e){
+                console.log("el modal se mostro");
+            });
+            $('#contacto').on('hidden.bs.modal', function(e){
+                console.log("el modal se oculto");
+                
+                $('#contactoBtn').prop('disabled', false);
             });
         });
     </script>

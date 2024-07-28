@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap web</title>
 
-    <!-- build:css dist/index.css -->
+    <!-- build:css css/index.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -202,36 +202,11 @@
         </div>
     </footer>
 
-    <!-- build:js dist/index.js -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
-    <script>
-        $(function(){
-            $("[data-bs-toggle='tooltip']").tooltip();
-            $("[data-bs-toggle='popover']").popover();
-            $('.carousel').carousel({
-                interval: 2000
-            });
-
-            $('#contacto').on('show.bs.modal', function(e){
-                console.log("el modal se esta mostrando");
-
-                $('#contactoBtn').removeClass('btn-outline-success');
-                $('#contactoBtn').addClass('btn-primary');
-                $('#contactoBtn').prop('disabled', true);
-            });
-            $('#contacto').on('shown.bs.modal', function(e){
-                console.log("el modal se mostro");
-            });
-            $('#contacto').on('hidden.bs.modal', function(e){
-                console.log("el modal se oculto");
-
-                $('#contactoBtn').prop('disabled', false);
-            });
-        });
-    </script>
+    <script src="js/index.js"></script>
     <!-- endbuild -->
 
 </body>
